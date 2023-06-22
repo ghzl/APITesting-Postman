@@ -41,4 +41,4 @@ If you find any issues or have suggestions for improvement, please open an issue
 
 ## License
 
-This Postman project is released under the [MIT License](LICENSE). You are free to use, modify, and distribute this project as per the terms of the license.
+This Postman project is released under the [GPL-3.0 License](LICENSE). You are free to use, modify, and distribute this project as per the terms of the license.
