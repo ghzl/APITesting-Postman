@@ -1,5 +1,5 @@
 # APITesting-Postman
-Certainly! I can help you create a project folder for software quality assurance using Postman. Here's a step-by-step guide to set it up:
+Here's a step-by-step guide to set it up:
 
 Step 1: Install Postman
 If you haven't already, download and install Postman from the official website (https://www.postman.com/downloads/).
