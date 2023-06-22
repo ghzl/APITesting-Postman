@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "cde11ae0-b282-4c21-8f87-27b6c1116f0d",
+		"name": "HTTP-Method",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET-Method_Testing-Page-Number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dab4284d-c23f-4064-b497-ce6473d7de44",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"\r",
+							"pm.test(\"Check key response is equal to request params (page = n)\", function () {\r",
+							"    pm.expect(response.page).to.eql(2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "1e75e86e-6d94-40b5-a0da-fedafd780748",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/users?page=2",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Method_Testing-Users-Search",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ff6c1abd-916b-4e1a-822f-cce8624976a7",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"\r",
+							"pm.test(\"Check user response is equal to request param\", function() {\r",
+							"    pm.expect(response.data.id).is.to.eql(2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "ad296f2c-30eb-4666-9003-5eca35cbda00",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{URL}}/api/users/2"
+			},
+			"response": []
+		}
+	]
+}
