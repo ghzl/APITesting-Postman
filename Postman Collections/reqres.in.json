@@ -121,13 +121,14 @@
 					"script": {
 						"id": "fc219f77-d069-4bf3-b363-9bf5ae93da49",
 						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"\r",
 							"pm.test(\"Successful POST request\", function () {\r",
 							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
 							"});\r",
 							"\r",
-							"\r",
-							"pm.test(\"Body matches string\", function () {\r",
-							"    pm.expect(pm.response.name()).to.include(\"Ahmad Dhoni\");\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    pm.expect(response.name).to.eql(\"Ahmad Dhoni\");\r",
 							"});"
 						],
 						"type": "text/javascript"
