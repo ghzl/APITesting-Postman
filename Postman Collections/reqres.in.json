@@ -121,9 +121,14 @@
 					"script": {
 						"id": "fc219f77-d069-4bf3-b363-9bf5ae93da49",
 						"exec": [
-							"pm.test(\"Status code is 201\", function () {\r",
-							"    pm.response.to.have.status(201);\r",
-							"});"
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"Ahmad Dhoni\");\r",
+							"});\r",
+							""
 						],
 						"type": "text/javascript"
 					}
