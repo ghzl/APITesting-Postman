@@ -112,6 +112,57 @@
 				"url": "{{URL}}/api/users/29"
 			},
 			"response": []
+		},
+		{
+			"name": "POST-Method_Testing-User-Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc219f77-d069-4bf3-b363-9bf5ae93da49",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "f6815753-cc31-4a51-8e2d-e40ff02faaaa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Ahmad\",\r\n    \"job\" : \"CEO\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users?page=2",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
