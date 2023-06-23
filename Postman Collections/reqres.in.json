@@ -127,7 +127,7 @@
 							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Your test name\", function () {\r",
+							"pm.test(\"Value on Response is Equal to Request \", function () {\r",
 							"    pm.expect(response.name).to.eql(\"Ahmad Dhoni\");\r",
 							"});"
 						],
