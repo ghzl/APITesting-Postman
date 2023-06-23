@@ -27,7 +27,7 @@
 					}
 				}
 			],
-			"_postman_id": "1e75e86e-6d94-40b5-a0da-fedafd780748",
+			"id": "1e75e86e-6d94-40b5-a0da-fedafd780748",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -75,7 +75,7 @@
 					}
 				}
 			],
-			"_postman_id": "ad296f2c-30eb-4666-9003-5eca35cbda00",
+			"id": "ad296f2c-30eb-4666-9003-5eca35cbda00",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -83,6 +83,33 @@
 				"method": "GET",
 				"header": [],
 				"url": "{{URL}}/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Method_Testing-Negative-Case",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7a4dc42-26fb-43ed-b84c-18daaddb1fe9",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "8104d3c0-2e28-4416-8a02-9977752f4b8f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{URL}}/api/users/29"
 			},
 			"response": []
 		}
