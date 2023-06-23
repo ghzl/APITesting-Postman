@@ -125,10 +125,10 @@
 							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Body is correct\", function () {\r",
-							"    pm.response.to.have.body(\"Ahmad Dhoni\");\r",
-							"});\r",
-							""
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.name()).to.include(\"Ahmad Dhoni\");\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
