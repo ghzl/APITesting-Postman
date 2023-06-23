@@ -145,22 +145,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "{{URL}}/api/users?page=2",
-					"host": [
-						"{{URL}}"
-					],
-					"path": [
-						"api",
-						"users"
-					],
-					"query": [
-						{
-							"key": "page",
-							"value": "2"
-						}
-					]
-				}
+				"url": "{{URL}}/api/users"
 			},
 			"response": []
 		}
