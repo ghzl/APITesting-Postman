@@ -20,16 +20,16 @@ To use this Postman project, follow the steps below:
 
 The Postman project is organized into different folders, each representing an HTTP method. Here's a brief overview of each folder:
 
-- **GET**: Contains requests that use the GET method to retrieve data from your API.
-- **POST**: Contains requests that use the POST method to create new resources or submit data to your API.
-- **PUT**: Contains requests that use the PUT method to update existing resources in your API.
-- **DELETE**: Contains requests that use the DELETE method to remove resources from your API.
+- **GET**: Contains requests that use the GET method to retrieve data from [reqres.in](https://reqres.in/) API.
+- **POST**: Contains requests that use the POST method to create new resources or submit data to [reqres.in](https://reqres.in/) API.
+- **PUT**: Contains requests that use the PUT method to update existing resources in [reqres.in](https://reqres.in/) API.
+- **DELETE**: Contains requests that use the DELETE method to remove resources from [reqres.in](https://reqres.in/) API.
 
 Each folder contains a set of pre-configured requests that you can execute directly or modify to match your specific test cases.
 
 ## Executing Requests
 
-To execute a request, simply select the desired request from the corresponding folder and click the "Send" button. Postman will send the request to your API and display the response details, including status codes, headers, and body content.
+To execute a request, simply select the desired request from the corresponding folder and click the "Send" button. Postman will send the request to [reqres.in](https://reqres.in/) API and display the response details, including status codes, headers, and body content.
 
 Make sure to review the request configuration, including request URL, headers, parameters, and request body, to ensure it aligns with your testing requirements.
 
